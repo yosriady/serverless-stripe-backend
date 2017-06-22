@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createCharge error cases returns response 1`] = `
+Object {
+  "body": "{\\"error\\":\\"Invalid JSON received from the Stripe API\\"}",
+  "headers": Object {
+    "Access-Control-Allow-Origin": "*",
+  },
+  "statusCode": 500,
+}
+`;
+
+exports[`createCharge success cases returns response 1`] = `
+Object {
+  "body": "{\\"message\\":\\"Charge processed succesfully!\\",\\"charge\\":{\\"success\\":true}}",
+  "headers": Object {
+    "Access-Control-Allow-Origin": "*",
+  },
+  "statusCode": 200,
+}
+`;

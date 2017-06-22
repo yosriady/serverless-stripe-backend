@@ -7,6 +7,7 @@
 # The `service` block is the name of the service
 service: serverless-stripe-backend
 
+# Configuration variables
 custom:
   secrets: ${file(secrets.json)}
 
@@ -15,16 +16,16 @@ provider:
   name: aws
   runtime: nodejs6.10
   stage: dev
-  profile: personal
+  # profile: personal
   region: ap-southeast-1
   environment:
-    STRIPE_SECRET_KEY: ${self:custom.secrets.stripeSecretKey}
+    STRIPE_SECRET_KEY: ${self:custom.secrets.stripeSecretKey} # Stripe secret API key
 
 # The `functions` block defines what code to deploy
 functions:
   createCharge:
     handler: functions/createCharge.handler
-    # The `events` block defines how to trigger the handler.helloWorld code
+    # The `events` block defines how to trigger the handler.createCharge code
     events:
       - http:
           path: charges
