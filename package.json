@@ -1,0 +1,26 @@
+{
+  "name": "serverless-stripe-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "node_modules/.bin/jest",
+    "test:coverage": "open coverage/lcov-report/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yosriady/serverless-stripe-backend.git"
+  },
+  "author": "Yos Riady",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yosriady/serverless-stripe-backend/issues"
+  },
+  "homepage": "https://github.com/yosriady/serverless-stripe-backend#readme",
+  "devDependencies": {
+    "jest": "^20.0.4"
+  },
+  "jest": {
+    "collectCoverage": true
+  }
+}
