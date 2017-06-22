@@ -5,16 +5,24 @@
 # uses to deploy your code to your provider of choice
 
 # The `service` block is the name of the service
-service: serverless-stripe-example
+service: serverless-stripe-backend
+
+custom:
+  secrets: ${file(secrets.json)}
 
 # The `provider` block defines where your service will be deployed
 provider:
   name: aws
   runtime: nodejs6.10
+  stage: dev
+  profile: personal
+  region: ap-southeast-1
+  environment:
+    STRIPE_SECRET_KEY: ${self:custom.secrets.stripeSecretKey}
 
 # The `functions` block defines what code to deploy
 functions:
-  helloWorld:
+  createCharge:
     handler: functions/createCharge.handler
     # The `events` block defines how to trigger the handler.helloWorld code
     events:
