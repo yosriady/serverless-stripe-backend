@@ -17,7 +17,7 @@ provider:
   runtime: nodejs6.10
   stage: dev
   # profile: personal
-  region: ap-southeast-1
+  # region: ap-southeast-1
   environment:
     STRIPE_SECRET_KEY: ${self:custom.secrets.stripeSecretKey} # Stripe secret API key
 
