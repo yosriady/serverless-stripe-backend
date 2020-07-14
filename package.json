@@ -30,6 +30,6 @@
     "collectCoverage": true
   },
   "dependencies": {
-    "stripe": "^4.23.0"
+    "stripe": "^4.25.0"
   }
 }
